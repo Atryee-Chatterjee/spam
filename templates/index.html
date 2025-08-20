@@ -1,0 +1,319 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- hero section -->
+<section class="hero mb-5">
+  <div class="hero-content text-left px-3">
+    <h1 class="fw-bold display-5">Protect Your App Against Spam & Bots</h1>
+    <p class="lead">AI-powered spam detection that keeps your apps, websites, and communities safe from malicious activity.</p>
+    <div class="hero-buttons d-flex flex-column flex-md-row justify-content-center gap-3 mt-3">
+      <a href="{{ url_for('test') }}" class="btn btn-primary btn-lg flex-fill">Try Demo Now</a>
+      <a href="{{ url_for('about') }}" class="btn btn-outline flex-fill">Learn More</a>
+    </div>
+  </div>
+  <div class="hero-graphic d-none d-md-block mt-4">
+    <div class="glow"></div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="how-it-works py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-white">How Our Spam Protection Works</h2>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 d-flex align-items-center">
+        <div class="step-icon me-3">
+          <i class="bi bi-envelope-open fs-1 text-primary"></i>
+        </div>
+        <div>
+          <h4>Step 1: Paste Your Message</h4>
+          <p>Our system instantly captures messages, ensuring that no potential spam slips through unnoticed.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center">
+        <div class="step-icon me-3">
+          <i class="bi bi-cpu fs-1 text-primary"></i>
+        </div>
+        <div>
+          <h4>Step 2: AI-Powered Analysis</h4>
+          <p>Advanced machine learning models scan the content, sender reputation, and hidden patterns to detect suspicious behavior in real-time.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center">
+        <div class="step-icon me-3">
+          <i class="bi bi-shield-check fs-1 text-primary"></i>
+        </div>
+        <div>
+          <h4>Step 3: Spam Classification</h4>
+          <p>Messages are classified into spam or safe categories using a multi-layer filtering system to maximize accuracy and minimize false positives.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center">
+        <div class="step-icon me-3">
+          <i class="bi bi-inbox fs-1 text-primary"></i>
+        </div>
+        <div>
+          <h4>Step 4: Get Instant Results</h4>
+          <p>Receive clear spam/not spam predictions from three different AI models with confidence scores, helping you make informed decisions about message safety.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features cards -->
+<section class="container my-5">
+  <h2 class="fw-bold text-center mb-5">Why Choose Our Spam Protection?</h2>
+  <div class="row text-center g-4">
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="feature-card h-100 p-3">
+        <i class="fas fa-bolt fa-3x mb-3"></i>
+        <h5>Real-Time Detection</h5>
+        <p>Scan emails and messages instantly to identify spam without delays.</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="feature-card h-100 p-3">
+        <i class="fas fa-brain fa-3x mb-3"></i>
+        <h5>Machine Learning Models</h5>
+        <p>Powered by Naïve Bayes, Logistic Regression & advanced algorithms.</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="feature-card h-100 p-3">
+        <i class="fas fa-user-check fa-3x mb-3"></i>
+        <h5>User-Friendly</h5>
+        <p>Simple interface that makes spam detection easy for everyone.</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="feature-card h-100 p-3">
+        <i class="fas fa-chart-line fa-3x mb-3"></i>
+        <h5>High Accuracy</h5>
+        <p>Delivering reliable results with maximum precision in spam filtering.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial -->
+<section class="py-5 bg-dark text-white feature-card">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">What Our Users Say</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- one -->
+        <div class="carousel-item active text-center">
+          <img src="{{url_for ('static', filename='images/image1.jpeg')}}" class="rounded-circle mb-3" alt="User 1" style="width:80px;height:80px;object-fit:cover;">
+          <blockquote class="blockquote">
+            <p class="mb-4">"This spam protection system is next level. It filters junk so well that my inbox feels brand new!"</p>
+          </blockquote>
+          <div class="blockquote text-white">
+            Atryee Chatterjee, <cite title="Company">BCA Student</cite>
+          </div>
+        </div>
+        <!-- two -->
+        <div class="carousel-item text-center">
+          <img src="{{url_for ('static', filename='images/image2.jpeg')}}" class="rounded-circle mb-3" alt="User 2" style="width:80px;height:80px;object-fit:cover;">
+          <blockquote class="blockquote">
+            <p class="mb-4">"Super smooth and reliable — exactly what we needed for handling emails at our startup."</p>
+          </blockquote>
+          <div class="blockquote text-white">
+            Asmita Roy, <cite title="Company">Tech Enthusiast</cite>
+          </div>
+        </div>
+        <!-- three -->
+        <div class="carousel-item text-center">
+          <img src="{{url_for ('static', filename='images/image4.jpg')}}" class="rounded-circle mb-3" alt="User 3" style="width:80px;height:80px;object-fit:cover;">
+          <blockquote class="blockquote">
+            <p class="mb-4">"Easy to use and highly effective. The accuracy of the filtering impressed me a lot. It's really Great."</p>
+          </blockquote>
+          <div class="blockquote text-white">
+            Alex Doe, <cite title="Company">Freelancer</cite>
+          </div>
+        </div>
+        <!-- four -->
+        <div class="carousel-item text-center">
+          <img src="{{url_for ('static', filename='images/image5.jpg')}}" class="rounded-circle mb-3" alt="User 4" style="width:80px;height:80px;object-fit:cover;">
+          <blockquote class="blockquote">
+            <p class="mb-4">"Super smooth and reliable — exactly what we needed for handling emails at our startup."</p>
+          </blockquote>
+          <div class="blockquote text-white">
+            William Hopper, <cite title="Company">AL ML Enthusiast</cite>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Why Spam Protection Section -->
+<section class="container  mb-5">
+  <div class="row align-items-center ">
+    <div class="col text-center mt-4">
+      <h2 class="fw-bold my-4">Don’t Let Spam Decide What You See <i class="fas fa-shield-alt" style=" color:#39a2ff;"></i></h2>
+      <p class="mt-3">
+        Spam isn’t just a few unwanted emails — it’s a daily battle against scams, phishing attempts, 
+        and dangerous links designed to trick you. Every year, millions of people lose personal data, 
+        money, and even their digital identity because of one careless click.
+      </p>
+      <p>
+        Our spam detection system acts as a smart shield for your inbox, automatically filtering 
+        threats before they ever reach you. This means you spend less time deleting junk, 
+        more time focusing on real conversations, and stay safe from hidden cyberattacks. 
+        Protecting your inbox isn’t optional anymore — it’s essential.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<!-- FAQ Section -->
+<section class="faq-section py-5 feature-card">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-white">Frequently Asked Questions</h2>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="accordion" id="faqAccordion">
+
+      <!-- Question 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer1" aria-expanded="false" aria-controls="answer1">
+            How does your spam protection system work?
+          </button>
+        </h2>
+        <div id="answer1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Our system uses machine learning models to analyze patterns in emails and classify them as spam or not, ensuring you get accurate protection without losing important messages.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer2" aria-expanded="false" aria-controls="answer2">
+            Can I integrate it with my existing email system?
+          </button>
+        </h2>
+        <div id="answer2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes! Our spam protection integrates seamlessly with popular email providers and can also be customized for enterprise solutions.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer3" aria-expanded="false" aria-controls="answer3">
+            Is my data secure?
+          </button>
+        </h2>
+        <div id="answer3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Absolutely. We use advanced encryption and privacy-first methods to ensure your data remains safe and confidential at all times.
+          </div>
+        </div>
+      </div>
+      <!-- QNA 4 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer4" aria-expanded="false" aria-controls="answer4">
+            Can I integrate this with my existing system?
+            </button>
+        </h2>
+        <div id="answer4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+            Yes! Our system is built to be flexible and can be easily integrated with most platforms, APIs, and existing workflows without major changes.
+            </div>
+        </div>
+    </div>
+    <!-- QNA 5 -->
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="faq5">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer5" aria-expanded="false" aria-controls="answer5">
+        Do I need technical knowledge to use it?
+        </button>
+    </h2>
+    <div id="answer5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+        Not at all. The platform is designed with a simple, intuitive interface so anyone can use it. Developers, however, can take advantage of deeper customization options.
+        </div>
+    </div>
+    </div>
+    <!-- QNA 6 -->
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="faq5">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer5" aria-expanded="false" aria-controls="answer5">
+        How accurate is your spam detection system?
+        </button>
+    </h2>
+    <div id="answer5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+        Our system uses advanced machine learning models and natural language processing to analyze messages with high precision. While no system can guarantee 100% accuracy, we consistently achieve over 95% detection rates, minimizing both false positives and false negatives to keep your communication safe.
+        </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    <div class="col-md-6">
+        <form>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Ask Any Question</label>
+            <textarea name="qna" class="form-control bg-white" placeholder="Feel Free To Ask Any Question"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+  </div>
+</section>
+<!-- social media -->
+<section>
+  <div class="container text-center my-5 feature-card">
+    <h2 class="fw-bold mb-5">Follow us on social media</h2>
+    <div class="row">
+      <div class="col-md-3 ">
+        <a href="https://www.facebook.com" class="text-decoration-none ">
+          <i class="fab fa-facebook fa-2x"></i>
+          <p>Facebook</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="https://www.twitter.com" class="text-decoration-none ">
+          <i class="fab fa-twitter fa-2x"></i>
+          <p>Twitter</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="https://www.instagram.com" class="text-decoration-none ">
+          <i class="fab fa-instagram fa-2x"></i>
+          <p>Instagram</p>
+        </a>
+      </div>
+      <div class="col-md-3 ">
+        <a href="https://www.linkedin.com/in/atryee-chatterjee/" class="text-decoration-none">
+          <i class="fab fa-linkedin fa-2x"></i>
+          <p>LinkedIn</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+

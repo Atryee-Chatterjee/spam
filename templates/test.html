@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid py-4">
+  <div class="row g-4 align-items-stretch">
+    <!-- Left Section: Input Form -->
+    <div class="col-12 col-lg-6 d-flex">
+      <div class="feature-card shadow-lg rounded p-4 bg-dark text-white w-100 d-flex flex-column">
+        <h2 class="mb-4">Spam Message Detector</h2>
+        <form method="post" class="flex-grow-1 d-flex flex-column">
+          <div class="mb-3 flex-grow-1">
+            <textarea name="message" class="form-control h-100" rows="6"
+                      placeholder="Paste or type your message here..."></textarea>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg">Check Message</button>
+          </div>
+        </form>
+        <!-- result -->
+        <hr>
+        {% if prediction %}
+        <h3 class="mb-4 text-center mt-3">Detection Results</h3> 
+        <ul class="list-group mb-4">
+          {% for model, result in prediction.items() %}
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><strong>{{ model }}</strong></span>
+            <span class="badge {% if result == 'Spam' %}bg-danger{% else %}bg-success{% endif %}">
+              {{ result }}
+            </span>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Right Section: Chart -->
+    <div class="col-12 col-lg-6 d-flex">
+      <div class="feature-card shadow-lg rounded p-4 bg-dark text-white w-100 d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+          <h3 class="mb-3">Spam Risk Analysis</h3>
+          {% if prediction %}
+            <canvas id="spamChart" class="w-100" style="max-width: 350px; max-height: 350px;"></canvas>
+          {% else %}
+            <div class="d-flex flex-column align-items-center justify-content-center" style="height: 250px;">
+              <span class="text-white fs-5 text-center">Spam risk chart will appear here after you check a message.</span>
+              <i class="bi bi-bar-chart" style="font-size: 3rem; color: #6c757d;"></i>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const spamRisk = {{ spam_risk|int }};
+</script>
+<script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+{% endblock %}

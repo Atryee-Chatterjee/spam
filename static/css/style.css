@@ -1,0 +1,252 @@
+
+/* index page */
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 10%;
+  /* min-height: 80vh; */
+  background: radial-gradient(circle at top left, #2b1055, #000);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #b8b8d1;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.btn-outline {
+  padding: 10px 22px;
+  border: 2px solid #39a2ff;
+  /* border-radius: 50px; */
+  color: #39a2ff;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #39a2ff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+
+/* Glowing graphic */
+.hero-graphic {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.glow {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #6a11cb, transparent 70%);
+  animation: pulse 4s infinite;
+  filter: blur(80px);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+
+
+/* cars index */
+/* Reuse hero background for cards */
+.feature-card {
+  background: radial-gradient(circle at top left, #2b1055, #000); /* same as hero */
+  border-radius: 1rem;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+/* hover effect */
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+}
+
+/* text tweaks */
+.feature-card h5 {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #b8b8d1;
+}
+
+/* indexpage - for how it works section */
+.step-icon {
+  min-width: 70px;
+  min-height: 70px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.step-icon:hover {
+  transform: scale(1.1);
+}
+
+/* about page */
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-graphic {
+    display: none; /* hide glowing orb on small screens */
+  }
+
+  .feature-card {
+    margin-bottom: 20px;
+  }
+
+  .carousel img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+}
+
+
+/* test.html */
+/* Center card container */
+.centered-container {
+    flex: 1; /* pushes footer down */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CARD (scoped for spam detector page) */
+.detector-card {
+    box-shadow: 0 8px 32px rgba(10,88,202,0.25), 0 1.5px 8px rgba(0,0,0,0.18);
+    border-radius: 1.5rem;
+    background: rgba(18, 24, 40, 0.65);
+    color: #f8f9fa;
+    border: none;
+    backdrop-filter: blur(16px);
+    padding: 2.5rem 2rem;
+    max-width: 420px;
+    margin: auto;
+}
+
+.detector-card h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+
+/* BUTTONS */
+.btn-primary {
+    background: linear-gradient(90deg, #0a58ca 0%, #39a2ff 100%);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 8px rgba(10,88,202,0.18);
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #39a2ff 0%, #0a58ca 100%);
+    transform: translateY(-2px);
+}
+
+/* FORM */
+textarea.form-control {
+    background: rgba(34,34,51,0.85);
+    color: #fff;
+    border: 1px solid #0a58ca;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    padding: 1rem;
+    box-shadow: 0 1px 4px rgba(10,88,202,0.08);
+}
+
+/* LIST + BADGES */
+.list-group-item {
+    background: rgba(34, 34, 51, 0.92);
+    color: #f8f9fa;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.badge.bg-danger {
+    background-color: #ff4d6d !important;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+}
+
+.badge.bg-success {
+    background-color: #39a2ff !important;
+    color: #1a1a2e;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+}

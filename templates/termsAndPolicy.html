@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="hero-content">
+    <h1>Privacy Policy</h1>
+    <p>Thanks for using SpamNix! Our Privacy Policy details how we handle your info. By using SpamNix, you agree to these practices.</p>
+    
+    <div class="hero-buttons">
+      <a href="{{ url_for('test') }}" class="btn btn-primary btn-lg">Try Demo Now</a>
+      <!-- <a href="{{ url_for('about') }}" class="btn btn-outline">Learn More</a> -->
+    </div>
+  </div>  
+  <!-- Glowing Orb / Illustration -->
+  <div class="hero-graphic">
+    <div class="glow"></div>
+  </div>
+</section>
+
+<!-- Privacy Policy Section -->
+<div class="container">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col">
+                <h3>Information We Collect</h3>
+            </div>
+            <div class="col">
+                <p>We collect two main types of information to provide and improve our service. <br><b style="color: #39a2ff;"> User-Provided Information</b>
+                This is information you give us directly. When you create an account or use our contact form, we collect personal information like your name, email address, and any other details you provide. We do not store the content of messages you submit to our API for analysis; we only process them to return a spam or not-spam classification.
+                <br>
+                <b style="color: #39a2ff;">Usage Data</b>
+                We collect information on how the SpamNix service is accessed and used. This data may include your IP address, browser type, device type, and the frequency of your API calls. This information is crucial for monitoring performance, ensuring service reliability, and improving our AI models.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <h3>Information Sharing</h3>
+            </div>
+            <div class="col">
+                <p>We do not sell or rent your personal information to third parties. We may share information with <b style="color: #39a2ff;"> trusted service providers</b> who assist us in operating our business (e.g., cloud hosting, analytics). These partners are required to protect your information and are only <b style="color: #39a2ff;">authorized </b>
+                  to use it for the purposes we specify. We may also disclose your information if required by law or to protect our rights and safety.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <h3>Data Security</h3>
+            </div>
+            <div class="col">
+                <p>We are dedicated to <b style="color: #39a2ff;">safeguarding your information </b>and have implemented reasonable security measures to protect against unauthorized access, disclosure, or destruction. While we strive to use commercially acceptable means to protect your data, no method of transmission over the internet or electronic storage is 100% secure.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <h3> Changes to This Privacy Policy</h3>
+            </div>
+            <div class="col">
+                <p>We may <b style="color: #39a2ff;">update this Privacy Policy</b> from time to time to reflect changes to our practices or for other operational, legal, or regulatory reasons. We will notify you of any changes by posting the <b style="color: #39a2ff;">new Privacy Policy</b> on this page. We encourage you to review this policy periodically.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <h3>Contact Us</h3>
+            </div>
+            <div class="col">
+                <p>If you have any questions about this Privacy Policy, please contact us at <b style="color: #39a2ff;">info@spamnix.com.</b></p>
+            </div>
+        </div>
+        <hr>
+        
+    </div>
+</div>
+
+<!-- social media -->
+ <section>
+  <div class="container text-center my-5 feature-card">
+    <h2 class="fw-bold mb-5">Follow us on social media</h2>
+    <div class="row">
+      <div class="col-md-3 ">
+        <a href="https://www.facebook.com" class="text-decoration-none ">
+          <i class="fab fa-facebook fa-2x"></i>
+          <p>Facebook</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="https://www.twitter.com" class="text-decoration-none ">
+          <i class="fab fa-twitter fa-2x"></i>
+          <p>Twitter</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="https://www.instagram.com" class="text-decoration-none ">
+          <i class="fab fa-instagram fa-2x"></i>
+          <p>Instagram</p>
+        </a>
+      </div>
+      <div class="col-md-3 ">
+        <a href="https://www.linkedin.com/in/atryee-chatterjee/" class="text-decoration-none">
+          <i class="fab fa-linkedin fa-2x"></i>
+          <p>LinkedIn</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

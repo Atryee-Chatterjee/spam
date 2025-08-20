@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero flex-column flex-md-row text-center text-md-start">
+  <div class="hero-content">
+    <h1>About us</h1>
+    <p>
+      We leverage cutting-edge machine learning and a multi-model approach 
+      (including Logistic Regression, Naive Bayes, and Random Forest) to provide 
+      the most accurate and reliable spam detection.
+    </p>
+    
+    <div class="hero-buttons justify-content-center justify-content-md-start">
+      <a href="{{ url_for('test') }}" class="btn btn-primary btn-lg">Try Demo Now</a>
+    </div>
+  </div>  
+
+  <!-- Glowing Orb / Illustration -->
+  <div class="hero-graphic d-none d-md-block">
+    <div class="glow"></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-5 fw-bold">Our Mission</h1>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p>
+          We built SpamNix to take the fight to spam. Our mission is to secure your digital spaces and restore trust, one message at a time. 
+          We don't rely on a single solution; our powerful backend uses a unique ensemble of Naive Bayes, Logistic Regression, and Random Forest models 
+          to provide a level of detection accuracy that other systems can't match.
+        </p>
+        <ul>
+          <li>Unparalleled accuracy through a multi-model approach</li>
+          <li>Simple, developer-friendly integration</li>
+          <li>The ultimate peace of mind</li>
+        </ul>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="{{url_for('static', filename='images/spam.jpeg')}}" class="img-fluid rounded-circle mb-3" alt="spam">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- our services -->
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-5 fw-bold">Our Services</h1>
+    <div class="row g-4">
+      <div class="col-12 col-lg-4 text-center feature-card">
+        <i class="fas fa-shield-alt fa-3x mb-3"></i>
+        <h3>Spam Protection</h3>
+        <p>Harness the power of our unique multi-model AI system, which combines Logistic Regression, Naive Bayes, and Random Forest classifiers to deliver unparalleled accuracy in spam detection. Our solution tirelessly works to filter out malicious content, ensuring your platforms remain clean and trustworthy.</p>
+      </div>
+      <div class="col-12 col-lg-4 text-center feature-card">
+        <i class="fas fa-envelope-open-text fa-3x mb-3"></i>
+        <h3>API Integration</h3>
+        <p>Seamlessly integrate our best-in-class spam detection directly into your applications, websites, and services. Our robust and well-documented APIs are designed for developers, offering a scalable and effortless way to protect your digital properties from spam and abuse.</p>
+      </div>
+      <div class="col-12 col-lg-4 text-center feature-card">
+        <i class="fas fa-lock fa-3x mb-3"></i>
+        <h3>Data Security</h3>
+        <p>We prioritize the safety and privacy of your data. Every message processed through our system is handled with strict confidentiality, ensuring no unauthorized access or misuse. With secure protocols and robust safeguards, your data stays protected at all times.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- technology -->
+<section>
+  <div class="container d-flex flex-column align-items-center">
+    <div class="row">
+      <div class="col text-center">
+        <img src="{{url_for('static', filename='images/diagram.png')}}" class="img-fluid" alt="diagram">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- our teammate -->
+<section class="py-5 bg-dark text-white feature-card">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Our Team</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+          <img src="{{url_for('static', filename='images/image1.jpeg')}}" class="rounded-circle mb-3 img-fluid" alt="User 1">
+          <div class="blockquote text-white">Atryee Chatterjee, <cite>Founder & CEO</cite></div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static', filename='images/image2.jpeg')}}" class="rounded-circle mb-3 img-fluid" alt="User 2">
+          <div class="blockquote text-white">Subhechha Kar, <cite>Entrepreneur</cite></div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static', filename='images/image4.jpg')}}" class="rounded-circle mb-3 img-fluid" alt="User 3">
+          <div class="blockquote text-white">Steve Harrington, <cite>Freelancer</cite></div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

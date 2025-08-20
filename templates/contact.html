@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="hero-content">
+    <h1>Conatct us</h1>
+    <p>We're here to help. Whether you have a question about our spam detection services, need technical support, or want to discuss a potential partnership, our team is ready to assist. Please use the form below to get in touch, and we will get back to you as soon as possible.</p>
+    
+    <div class="hero-buttons">
+      <a href="{{ url_for('test') }}" class="btn btn-primary btn-lg">Try Demo Now</a>
+      <!-- <a href="{{ url_for('about') }}" class="btn btn-outline">Learn More</a> -->
+    </div>
+  </div>  
+  <!-- Glowing Orb / Illustration -->
+  <div class="hero-graphic">
+    <div class="glow"></div>
+  </div>
+</section>
+
+<!-- conatct section -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center mt-5 mb-5 fw-bold">Contact Information</h2>
+            <p>If you prefer to reach us directly, you can use the following contact details:</p>
+            <p>We look forward to hearing from you!</p>
+            <ul class="list-unstyled">
+                <li><strong><i class="fa-solid fa-envelope p-3" style="color: #39a2ff;"></i>Email: spamnix@gamil.com</strong></li>
+                <li><strong><i class="fa-solid fa-phone-volume p-3" style="color: #39a2ff;"></i>Phone no: +91 24411 39105</strong></li>
+                <li><strong><i class="fa-solid fa-location-dot p-3" style="color: #39a2ff;"></i></i>Address: West Bengal, Kolkata, pin- 700128</strong></li>
+            </ul>
+            
+        </div>
+        <div class="col">
+            <h2 class="text-center mt-5 mb-5 fw-bold">Send Us A Message</h2>
+            <form method="POST" action="{{ url_for('contact') }}">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    
+    </div>
+</div>
+
+<!-- map -->
+<section>
+    <div class="container my-5">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.35231277325!2d88.26495090163961!3d22.53540637448262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1755511876512!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+
+<!-- social media -->
+ <section>
+  <div class="container text-center my-5 feature-card">
+    <h2 class="fw-bold mb-5">Follow us on social media</h2>
+    <div class="row">
+      <div class="col-md-3 ">
+        <a href="https://www.facebook.com" class="text-decoration-none ">
+          <i class="fab fa-facebook fa-2x"></i>
+          <p>Facebook</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="https://www.twitter.com" class="text-decoration-none ">
+          <i class="fab fa-twitter fa-2x"></i>
+          <p>Twitter</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="https://www.instagram.com" class="text-decoration-none ">
+          <i class="fab fa-instagram fa-2x"></i>
+          <p>Instagram</p>
+        </a>
+      </div>
+      <div class="col-md-3 ">
+        <a href="https://www.linkedin.com/in/atryee-chatterjee/" class="text-decoration-none">
+          <i class="fab fa-linkedin fa-2x"></i>
+          <p>LinkedIn</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
