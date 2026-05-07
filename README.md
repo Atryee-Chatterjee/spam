@@ -8,14 +8,14 @@
 
 ## 🚀 Features
 
-- 📊 **Spam Probability Visualization** with interactive Chart.js
-- 🤖 **Multiple ML Models** for robust predictions:
+-  **Spam Probability Visualization** with interactive Chart.js
+-  **Multiple ML Models** for robust predictions:
   - Naive Bayes – for quick and lightweight classification
   - Logistic Regression – for higher accuracy
   - Random Forest – for reliable predictions
-- 🌐 **Responsive, modern UI** for seamless interaction
-- 🔌 **API integration** to make predictions in real-time
-- ☁ **Cloud deployment** ready for production
+-  **Responsive, modern UI** for seamless interaction
+-  **API integration** to make predictions in real-time
+-  **Cloud deployment** ready for production
 
 ## 🛠️ Tech Stack
 
